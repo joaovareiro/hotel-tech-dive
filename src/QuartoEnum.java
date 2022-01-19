@@ -1,7 +1,7 @@
 public enum QuartoEnum {
-    SIMPLES("Simples",90,140,14),
-    LUXO("Luxo",150,400,22),
-    ;
+    SIMPLES("Simples",90,140,25),
+    LUXO("Luxo",150,400,15),
+    SUPREMA("Suprema",500,800,10);
 
     private String nomeQuarto;
     private int valorBaixa;
@@ -17,5 +17,17 @@ public enum QuartoEnum {
 
     public int getNumDisponiveis() {
         return numDisponiveis;
+    }
+
+    public void diminuiDisponivel() {
+        this.numDisponiveis--;
+    }
+
+    public int getValorBaixa() {
+        return valorBaixa;
+    }
+
+    public int getValorAlta() {
+        return valorAlta;
     }
 }
