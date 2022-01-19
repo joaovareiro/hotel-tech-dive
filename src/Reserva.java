@@ -67,9 +67,20 @@ public class Reserva {
         }
     }
 
+    public void cancelaDiaria(Reserva r){
+        quarto = null;
+        responsavel = null;
+        dataCheckIn = null;
+        dataCheckOut = null;
+    }
+
     public void getTotal() {
-        int dias = (int) ChronoUnit.DAYS.between(this.dataCheckIn, this.dataCheckOut);
-        System.out.println("O valor total da estadia do cliente " + this.responsavel.getNome() + " é " + dias*diaria);
+        try {
+            int dias = (int) ChronoUnit.DAYS.between(this.dataCheckIn, this.dataCheckOut);
+            System.out.println("O valor total da estadia do cliente " + this.responsavel.getNome() + " é " + dias * diaria);
+        }catch (NullPointerException nullPointerException){
+            System.out.println("Essa reserva foi cancelada");
+        }
     }
 
     public int getDias(LocalDate in, LocalDate out) {

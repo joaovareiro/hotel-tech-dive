@@ -30,6 +30,7 @@ public class Simulacao {
         Reserva r8 = new Reserva(q7,h7,"20/01/2022","26/01/2022");
         Reserva r9 = new Reserva(q9,h10,"01/03/2022","07/03/2022");
         Reserva r10 = new Reserva(q10,h8,"26/02/2022","28/02/2022");
+        r1.cancelaDiaria(r1);
         r1.getTotal();
         r2.getTotal();
         r3.getTotal();
